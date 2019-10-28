@@ -99,6 +99,18 @@ export const constantRoutes = [
  */
 export const asyncRoutes = [
   {
+    path: '/order',
+    component: Layout,
+    children: [
+      {
+        path: 'order',
+        component: () => import('@/pages/order/order'),
+        name: 'order',
+        meta: { title: '订单管理', icon: 'tab' }
+      }
+    ]
+  },
+  {
     path: '/customer',
     component: Layout,
     children: [
